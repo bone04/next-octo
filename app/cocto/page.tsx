@@ -20,8 +20,9 @@ export default function Home() {
         const data = await resp.json();
         setOutput(JSON.stringify(data, null, 2));
       }
-    } catch (err: unknown) {
-      setOutput("Fetch error: " + err.message);
+    } catch (error) {
+      // setOutput("Fetch error: " + err.message);
+      console.error("API Error:", error.message);
     } finally {
       setLoading(false);
     }
