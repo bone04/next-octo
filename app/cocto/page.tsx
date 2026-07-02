@@ -22,7 +22,7 @@ export default function Home() {
       }
     } catch (error) {
       // setOutput("Fetch error: " + err.message);
-      console.error("API Error:", error.message);
+      console.log("API Error:", error.message);
     } finally {
       setLoading(false);
     }
